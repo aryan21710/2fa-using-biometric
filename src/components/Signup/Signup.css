@@ -1,10 +1,11 @@
-.signInContainer {
+.signUpContainer {
   display: flex !important;
   align-items: center;
-  height: 92vh;
+  justify-content: center;
+  height: 90vh;
 }
 
-.login {
+.signUp {
   align-items: center;
   display: flex;
   flex-direction: column;

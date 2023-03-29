@@ -1,13 +1,62 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.signUpIcon {
+  color: #ffffff;
+  background-color: red;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0px 0px 10px 0px;
+}
+
+.loginFooter {
+  margin: 0px !important;
+  color: grey;
+}
+
+.text {
+  font-size: 20px !important;
+  font-weight: 500;
+  margin: 0px 0px 10px 0px !important;
+}
+
+.signupLink {
+  margin: 0px 0px 10px 0px !important;
+  font-weight: 500;
+}
+
+.input {
+  margin: 8px 0px !important;
+  width: 80%;
+  width: 31vw !important;
+}
+
+.activeButon {
+  background-color: #3f51b5 !important;
+  color: white !important;
+}
+
+.button {
+  background-color: #3f51b5 !important;
+  margin: 8px 0px !important;
+  width: 31vw !important;
+}
+
+.checkbox {
+}
+
+.error {
+  color: red !important;
+  margin: 0 auto;
 }
