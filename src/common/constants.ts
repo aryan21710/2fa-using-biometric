@@ -5,6 +5,7 @@ export const BASE_URL = "http://localhost:5000/api";
 export const FOOTER = "Copyright @Moonfare 2023";
 
 export const API_CONFIG = {
+	method: "POST",
 	mode: "cors", // no-cors, *cors, same-origin
 	cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
 	credentials: "same-origin", // include, *same-origin, omit
@@ -24,7 +25,6 @@ export const LOGIN_ERROR = "Sign In Failed";
 export const SIGNUP_SUCCESS = "Sign up Successfull";
 export const SIGNUP_ERROR = "Sign up Failed";
 export const UNATHORIZED = "Restricted Page. Please Sign In.";
-
 
 export const TOASTIFY_CONFIG = {
 	position: toast.POSITION.TOP_LEFT,

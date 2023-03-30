@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { NAVIGATION_LINKS } from "./constants";
 
 //eslint-disable-next-line
-const RestrictedRoute = ({ children }:any) => {
+const RestrictedRoute = ({ children }: any) => {
 	//eslint-disable-next-line
   const isUserLoggedIn = sessionStorage.getItem("token");
 
-	const RedirectToLogin = (from:any) => {
+	const RedirectToLogin = (from: any) => {
 		const navigate = useNavigate();
 		useEffect(() => {
 			navigate(NAVIGATION_LINKS.LOGIN, { state: { from } });

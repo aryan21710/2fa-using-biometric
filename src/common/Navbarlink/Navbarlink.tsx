@@ -9,11 +9,11 @@ import "./Navbarlink.css";
 interface IProps {
   setIsUserLoggedIn: React.Dispatch<React.SetStateAction<string | boolean>>;
   links: {
-    name: string,
-    url: string,
-  }[]
+    name: string;
+    url: string;
+  }[];
 }
-const Navbarlink:React.FC<IProps> = ({ setIsUserLoggedIn, links }) => {
+const Navbarlink: React.FC<IProps> = ({ setIsUserLoggedIn, links }) => {
 	const navigate = useNavigate();
 	// eslint-disable-next-line
   const updatedLinks = links.map((link) => {

@@ -8,7 +8,7 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import uuid from "react-uuid";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import SecurityIcon from "@mui/icons-material/Security";
 import Navbarlink from "../Navbarlink/Navbarlink";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
@@ -17,10 +17,10 @@ import { NAVIGATION_LINKS } from "../../common/constants";
 // eslint-disable-next-line
 
 interface IProps {
-  isUserLoggedIn: string | boolean,
+  isUserLoggedIn: string | boolean;
   setIsUserLoggedIn: React.Dispatch<React.SetStateAction<string | boolean>>;
 }
-const Navbar:React.FC<IProps> = ({ isUserLoggedIn, setIsUserLoggedIn }) => {
+const Navbar: React.FC<IProps> = ({ isUserLoggedIn, setIsUserLoggedIn }) => {
 	// eslint-disable-next-line
   const { HOME, LOGIN } = NAVIGATION_LINKS;
 	const [links, setLinks] = useState([
@@ -54,7 +54,7 @@ const Navbar:React.FC<IProps> = ({ isUserLoggedIn, setIsUserLoggedIn }) => {
 
 	const [anchorElNav, setAnchorElNav] = useState(null);
 
-	const handleOpenNavMenu = (event:any) => {
+	const handleOpenNavMenu = (event: any) => {
 		setAnchorElNav(event?.currentTarget);
 	};
 
@@ -66,16 +66,14 @@ const Navbar:React.FC<IProps> = ({ isUserLoggedIn, setIsUserLoggedIn }) => {
 		<AppBar position="static" className="appBar">
 			<Toolbar disableGutters className="toolBar">
 				<Box className="logo">
-					<ShoppingCartIcon
-						sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
-					/>
+					<SecurityIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
 					{isUserLoggedIn ? (
 						<NavLink
 							to={HOME}
 							data-test="upgradEshop"
 							className="redirectToLogin"
 						>
-              upGrad E-Shop
+              Moonfare coding challenge
 						</NavLink>
 					) : (
 						<NavLink
@@ -83,13 +81,11 @@ const Navbar:React.FC<IProps> = ({ isUserLoggedIn, setIsUserLoggedIn }) => {
 							data-test="upgradEshop"
 							className="redirectToLogin"
 						>
-              upGrad E-Shop
+              Moonfare Coding Challenge
 						</NavLink>
 					)}
 
-					<ShoppingCartIcon
-						sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
-					/>
+					<SecurityIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
 					<Typography
 						variant="body2"
 						noWrap

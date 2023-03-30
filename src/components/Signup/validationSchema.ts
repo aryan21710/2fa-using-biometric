@@ -14,15 +14,6 @@ const validationSchema = Yup.object({
 	confirmPassword: Yup.string()
 		.oneOf([Yup.ref("password")], "Passwords must match")
 		.required("Required"),
-	contactNumber: Yup.number()
-		.positive()
-		.integer()
-		.required("Contact Number is Required")
-		.test(
-			"len",
-			"Phone number must be minimum 8 digits",
-			(val:any) => val && val.toString().length > 7
-		),
 });
 
 export default validationSchema;

@@ -20,9 +20,10 @@ code {
   margin: 0px 0px 10px 0px;
 }
 
-.loginFooter {
+.useBiometrics {
   margin: 0px !important;
-  color: grey;
+  color: #3f51b5;
+  font-weight: 700 !important;
 }
 
 .text {

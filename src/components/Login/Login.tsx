@@ -13,13 +13,11 @@ import {
 	RESTRICTED_ROUTES,
 	UNATHORIZED,
 	NAVIGATION_LINKS,
-	FOOTER,
 } from "../../common/constants";
 import validationSchema from "./validationSchema";
 import "./Login.css";
 
-
-interface IProps  {
+interface IProps {
   setIsUserLoggedIn: React.Dispatch<React.SetStateAction<string | boolean>>;
 }
 
@@ -29,7 +27,7 @@ const initialValues = {
 };
 
 // eslint-disable-next-line
-const Login:React.FC<IProps> = React.memo(({ setIsUserLoggedIn }) => {
+const Login: React.FC<IProps> = React.memo(({ setIsUserLoggedIn }) => {
 	const { SIGNUP, HOME } = NAVIGATION_LINKS;
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -81,7 +79,7 @@ const Login:React.FC<IProps> = React.memo(({ setIsUserLoggedIn }) => {
 			}}
 		>
 			{({ values, setFieldValue }) => {
-				const handleChange = (event:any) => {
+				const handleChange = (event: any) => {
 					const { name, value } = event.target;
 					setFieldValue(name, value);
 				};
@@ -129,14 +127,23 @@ const Login:React.FC<IProps> = React.memo(({ setIsUserLoggedIn }) => {
 										name="password"
 										render={(msg) => <div className="error">{msg}</div>}
 									/>
-									<Button data-test="signinButton" className="button" variant="contained" type="submit" data-testid="login">
+									<Button
+										data-test="signinButton"
+										className="button"
+										variant="contained"
+										type="submit"
+										data-testid="login"
+									>
                     SIGN IN
 									</Button>
 									<Typography variant="body1" className="signupLink">
-                    Dont have an account? <Link data-test="dontHaveAnAccountSignup"to={SIGNUP}>Signup</Link>
+                    Dont have an account?{" "}
+										<Link data-test="dontHaveAnAccountSignup" to={SIGNUP}>
+                      Signup
+										</Link>
 									</Typography>
-									<Typography variant="body1" className="loginFooter">
-										{FOOTER}
+									<Typography variant="body1" className="useBiometrics">
+                    Use Biometrics For Login
 									</Typography>
 								</Box>
 							</Container>
